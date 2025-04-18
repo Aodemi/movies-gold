@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: cmvghazi/movies-frontend:${FRONTEND_VERSION:-latest}
+    image: aodemi/tp2-2258849-frontend:${FRONTEND_VERSION:-latest}
     build:
       context: ./movies-frontend
     ports:
@@ -11,8 +11,8 @@ services:
       - movies-network
 
   backend:
-    image: cmvghazi/movies-backend:${BACKEND_VERSION:-latest}
-    container_name: movies-backend
+    image: aodemi/tp2-2258849-backend:${BACKEND_VERSION:-latest}
+    container_name: tp2-2258849-backend
     build:
       context: ./movies-backend
     # In case you just want to deploy the backend and access it
