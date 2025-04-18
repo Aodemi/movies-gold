@@ -15,10 +15,8 @@ services:
     container_name: tp2-2258849-backend
     build:
       context: ./movies-backend
-    # In case you just want to deploy the backend and access it
-    # without deploying the frontend, add a port mapping
-    # ports:
-    #   - "8080:8080"
+    ports:
+      - "8080:8080"
     depends_on:
       - mongodb
     networks:
